@@ -10,7 +10,7 @@ void ExibirInfo()
 
 void Divisa()
 {
-    Console.WriteLine("\n=================================================================================");  
+    Console.WriteLine("\n=============================================================");  
 }
 
 void Menu()
@@ -21,6 +21,7 @@ void Menu()
     Console.WriteLine("\nDigite 1 para acessar os Dados Pessoais");
     Console.WriteLine("Digite 2 para acessar os Formação");
     Console.WriteLine("Digite 3 para acessar os Conhecimento");
+    Console.WriteLine("Digite 4 para sair do Programa");
     Console.WriteLine("\nDigite sua opção:");
 
     string opcaoEscolhida = Console.ReadLine()!;
@@ -28,9 +29,9 @@ void Menu()
 
     switch (opcaoEscolhidaNumerica)
     {
-        case 1: DadosPessoais();    break;
-        case 2: Formacao();         break;
-        case 3: Conhecimento();      break;
+        case 1: DadosPessoais();        break;
+        case 2: Formacao();             break;
+        case 3: Conhecimento();         break;
 
         //case 3: Console.WriteLine("Fim de papo"); break;
     }
@@ -51,8 +52,10 @@ void DadosPessoais()
     Console.WriteLine($"Nome: {nome}, {idade}");
     Console.WriteLine($"Endereço: {endereco}, {numeroEndereco}");
 
+    Divisa();
     Menu();
     Console.Clear();
+
 }
 
 void Formacao()
@@ -67,8 +70,9 @@ void Formacao()
 
     Console.WriteLine($"Faculdade: {faculdade}, Graduação: {graduacao}");
     Console.WriteLine($"Ano Graduação: {anoGraduacao}");
-    Console.WriteLine($"CR: {coeficiente}");    
-    
+    Console.WriteLine($"CR: {coeficiente}");
+
+    Divisa();
     Menu();
     Console.Clear();
 }
@@ -87,6 +91,7 @@ void Conhecimento()
         Console.WriteLine("Curso: {0}", c);
     }
 
+    Divisa();
     Menu();
     Console.Clear();
 
